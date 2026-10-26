@@ -8,7 +8,7 @@ import com.bonergi.frontend.objects.BulletType;
 import com.bonergi.frontend.objects.enemies.Boss;
 import com.bonergi.frontend.objects.enemies.Fairy;
 import com.bonergi.frontend.objects.items.Item;
-import com.bonergi.frontend.objects.items.ItemType;
+import com.bonergi.frontend.objects.items.ItemType
 
 public class EntityFactory {
 

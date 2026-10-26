@@ -3,6 +3,7 @@ package com.bonergi.frontend.objects.systems;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.audio.Sound;
+import com.bonergi.frontend.systems.AudioManager;
 
 public class AudioManager {
     private static AudioManager instance;
