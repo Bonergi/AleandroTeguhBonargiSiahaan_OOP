@@ -62,9 +62,20 @@ public class CollisionReferee {
         for (GameObject entity : entities) {
             if (entity.isDestroyed()) continue;
 
-
+        // KASUS A: Pengumpulan Item
+        if (entity instanceof Item item) {
+            if (player.getCoreHitbox().overlaps(item.getCoreHitbox()) || player.getGrazeHitbox().overlaps(item.getCoreHitbox())) {
+                player.collectItem(item);
+            }
+        }
+        // KASUS B: Kontak Fisik dengan Musuh
+        else if (entity instanceof Enemy enemy) {
+            if (player.getCoreHitbox().overlaps(enemy.getCoreHitbox())) {
+                player.takeDamage(10);
+            }
+        }
     }
 
         entities.addAll(newDrops);
     }
-
+}
